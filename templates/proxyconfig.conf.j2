@@ -1,0 +1,5 @@
+webserversips: 
+{%- for webserver in groups["web"] %}
+
+  - {{ hostvars[webserver]['ansible_host'] }}
+{%- endfor %}
