@@ -1,0 +1,9 @@
+---
+- hosts: proxy
+  tasks:
+#  - debug:
+#      msg: '{{ hostvars[groups["web"][0]] }}'
+  - name: generate_template
+    template:
+      src: proxyconfig.conf.j2
+      dest: /tmp/proxyconfig.conf
